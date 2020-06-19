@@ -8,8 +8,8 @@ function SignUp() {
   let name = '';
   let password = '';
   let confirmpassword = '';
-  const _onCreateSchool = () => {
-    console.log(name, confirmpassword);
+  const _onSubmit = () => {
+    console.log(password, confirmpassword);
   };
   const useStyles = makeStyles({
     root: {

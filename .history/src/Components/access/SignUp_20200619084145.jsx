@@ -2,15 +2,13 @@ import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import Paper from '@material-ui/core/Paper';
 
 function SignUp() {
   const [displayForm, setDisplayForm] = useState(false);
   let name = '';
   let password = '';
-  let confirmpassword = '';
-  const _onCreateSchool = () => {
-    console.log(name, confirmpassword);
-  };
+  let cofirmpassword = '';
   const useStyles = makeStyles({
     root: {
       height: '100vh',
@@ -121,7 +119,7 @@ function SignUp() {
               console.log(confirmpassword);
             }}
           />
-          <Button variant='contained' color='primary' onClick={_onCreateSchool}>
+          <Button variant='contained' color='primary'>
             Créer une école
           </Button>
         </form>

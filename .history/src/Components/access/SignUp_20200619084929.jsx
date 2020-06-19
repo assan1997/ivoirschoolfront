@@ -9,7 +9,7 @@ function SignUp() {
   let password = '';
   let confirmpassword = '';
   const _onCreateSchool = () => {
-    console.log(name, confirmpassword);
+    console.log(password, confirmpassword);
   };
   const useStyles = makeStyles({
     root: {

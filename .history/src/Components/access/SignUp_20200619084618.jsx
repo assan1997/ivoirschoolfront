@@ -8,8 +8,8 @@ function SignUp() {
   let name = '';
   let password = '';
   let confirmpassword = '';
-  const _onCreateSchool = () => {
-    console.log(name, confirmpassword);
+  const _onSubmit = () => {
+    console.log(password, confirmpassword);
   };
   const useStyles = makeStyles({
     root: {
@@ -87,7 +87,7 @@ function SignUp() {
         </Button>
       </div>
       <div className={classes.main}>
-        <form className={classes.form}>
+        <form className={classes.form} onSubmit={_onSubmit}>
           <TextField
             id='outlined-helperText'
             label='Nom de école'
@@ -121,7 +121,7 @@ function SignUp() {
               console.log(confirmpassword);
             }}
           />
-          <Button variant='contained' color='primary' onClick={_onCreateSchool}>
+          <Button variant='contained' color='primary'>
             Créer une école
           </Button>
         </form>

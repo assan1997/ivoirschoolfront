@@ -2,15 +2,13 @@ import React, { useState } from 'react';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import Paper from '@material-ui/core/Paper';
 
 function SignUp() {
   const [displayForm, setDisplayForm] = useState(false);
   let name = '';
   let password = '';
-  let confirmpassword = '';
-  const _onCreateSchool = () => {
-    console.log(name, confirmpassword);
-  };
+  let cofirmpassword = '';
   const useStyles = makeStyles({
     root: {
       height: '100vh',
@@ -75,7 +73,7 @@ function SignUp() {
         <div className={classes.navbrand}>Ivoire school</div>
       </div>
       <div className={classes.sub}>
-        <Button
+        <button
           onClick={() => {
             setDisplayForm(true);
           }}
@@ -84,7 +82,7 @@ function SignUp() {
           color='primary'
         >
           Créer une école{' '}
-        </Button>
+        </button>
       </div>
       <div className={classes.main}>
         <form className={classes.form}>
@@ -94,10 +92,6 @@ function SignUp() {
             defaultValue=''
             helperText='*'
             variant='outlined'
-            onChange={(text) => {
-              name = text.currentTarget.value;
-              console.log(name);
-            }}
           />
           <TextField
             id='outlined-helperText'
@@ -105,10 +99,6 @@ function SignUp() {
             defaultValue=''
             helperText='*'
             variant='outlined'
-            onChange={(text) => {
-              password = text.currentTarget.value;
-              console.log(password);
-            }}
           />
           <TextField
             id='outlined-helperText'
@@ -116,12 +106,8 @@ function SignUp() {
             defaultValue=''
             helperText='*'
             variant='outlined'
-            onChange={(text) => {
-              confirmpassword = text.currentTarget.value;
-              console.log(confirmpassword);
-            }}
           />
-          <Button variant='contained' color='primary' onClick={_onCreateSchool}>
+          <Button variant='contained' color='primary'>
             Créer une école
           </Button>
         </form>
